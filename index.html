@@ -95,15 +95,18 @@
 <img src="img/fig1_cropped.jpg" itemprop="image" width="800" alt="teaserImage">
 
 <h3>Abstract</h3>
-
 <p>We present a system where a robot takes as input a sequence of images of a human manipulating a rope from an initial to goal configuration, and outputs a sequence of actions that can reproduce the human demonstration, using only monocular images as input. To perform this task, the robot learns a pixel-level inverse dynamics model of rope manipulation directly from images in a self-supervised manner, using more than 30K interactions with the rope collected autonomously by the robot. The human demonstration provides a high-level plan of what to do and the low-level inverse model is used to execute the plan. We show that by combining the high and low-level plans, the robot can successfully manipulate a rope into a variety of target shapes using only a sequence of human-provided images for direction.
+</p>
+
+<h3>Paper</h3>
+<p style="padding-left: 10px; padding-right: 10px;">
+    The paper is available at: <a href='https://arxiv.org/abs/1703.02018'>[pdf]</a>
 </p>
 
 <h3 style="clear:both">Data</h3>
 <p style="padding-left: 10px; padding-right: 10px;">
 The data used for training the inverse dynamics model is available <a href="https://drive.google.com/open?id=0B3xZefNMOTwuUnU2MWVYeFdyUGM">here</a>. Instructions on how to access the data and use our validation set for evaluating the accuracy of the learnt model are included in an iPython notebook <a href="https://drive.google.com/open?id=0B3xZefNMOTwuSGlqakhlMkNmUFE">here</a>.
 </p>
-
 
 <h3>Video</h3>
 <table style="margin: 0 auto">
@@ -153,7 +156,7 @@ The data used for training the inverse dynamics model is available <a href="http
 <table style="margin: 0 auto">
   <tr>
   <p style="padding-left: 10px; padding-right: 10px;">
-  We tested the learnt model for manipulating two different ropes - (i) stiffer white rope and (ii) a softer black rope. Our model is succesfully able to manipulate these ropes into "S" and "L" shapes. This is very interesting because our model was trained using data from only a single red rope. While our model is sucessful at manipulating different ropes into "S" and "L" shapes it is unsucessful at forming knots or the "W" shape. One possible reason for this failure is that the white rope is too stiff to be bent into these shapes. Since our model was trained using only a single (green) background it doesnot generalizes to new backgrounds. If provided with substantially more robot-hours and a greater variety of ropes and environments, our  model could in principle learn a more generalizable notion of rope manipulation.   
+  We tested the learnt model for manipulating two different ropes - (i) stiffer white rope and (ii) a softer black rope. Our model is succesfully able to manipulate these ropes into "S" and "L" shapes. This is very interesting because our model was trained using data from only a single red rope. While our model is sucessful at manipulating different ropes into "S" and "L" shapes it is unsucessful at forming knots or the "W" shape. One possible reason for this failure is that the white rope is too stiff to be bent into these shapes. Since our model was trained using only a single (green) background it doesnot generalizes to new backgrounds. If provided with substantially more robot-hours and a greater variety of ropes and environments, our  model could in principle learn a more generalizable notion of rope manipulation.
   </p>
     <td>
      <iframe src="https://www.youtube.com/embed/XW5zwTssWoo?ecver=2" width="640" height="360" frameborder="0" allowfullscreen></iframe>
@@ -162,7 +165,10 @@ The data used for training the inverse dynamics model is available <a href="http
 </table>
 
 <h3>Link to videos</h3>
-<p style="padding-left: 10px; padding-right: 10px;">All videos above can be accessed <a href="https://drive.google.com/open?id=0B_yFyQ8wPSh8YURfc2VkVDNJVEU">here</a>
+<p style="padding-left: 10px; padding-right: 10px;">All videos above can be accessed <a href="https://drive.google.com/open?id=0B_yFyQ8wPSh8YURfc2VkVDNJVEU">here</a>.</p>
+
+<h3>Link to prior work</h3>
+<p style="padding-left: 10px; padding-right: 10px;">Our previous project on model learning and large-scale data collection can be viewed <a href="ashvin.me/pokebot-website/">here</a>.</p>
 
 <h3 style="clear:both">Website Template</h3>
 <p style="padding-left: 10px; padding-right: 10px;">
