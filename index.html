@@ -164,6 +164,72 @@ The data used for training the inverse dynamics model is available <a href="http
   </tr>
 </table>
 
+<h3>Architecture</h3>
+<p style="padding-left: 10px; padding-right: 10px;">The network architecture used is shown below and explained in the paper.</p>
+
+<img src="img/icra_net_cropped.png" itemprop="image" width="800" alt="teaserImage">
+
+<p style="padding-left: 10px; padding-right: 10px;">The classification output for the three variables is done with an autoregressive architecture. For example, in the model we evaluated on the robot, we first output a classification prediction for p (pixel), then sample the top prediction and feed it into the next prediction (theta), and so on for length, as shown in the image above. Below, we include the test accuracy of the top prediction for each variable and for different network architectures trained on the publicly available data of 30K actions.</p>
+
+<table style="margin: 0 auto; width:600px" class="datatable">
+  <tr>
+    <td>
+      Prediction Ordering
+    </td>
+    <td>
+      P Accuracy
+    </td>
+    <td>
+      T Accuracy
+    </td>
+    <td>
+      L Accuracy
+    </td>
+  </tr>
+  <tr>
+    <td>
+      None (Independent)
+    </td>
+    <td>
+      12%
+    </td>
+    <td>
+      13%
+    </td>
+    <td>
+      20%
+    </td>
+  </tr>
+  <tr>
+    <td>
+      P -> T -> L
+    </td>
+    <td>
+      10%
+    </td>
+    <td>
+      16%
+    </td>
+    <td>
+      29%
+    </td>
+  </tr>
+  <tr>
+    <td>
+      L -> T -> P
+    </td>
+    <td>
+      14%
+    </td>
+    <td>
+      13%
+    </td>
+    <td>
+      22%
+    </td>
+  </tr>
+</table>
+
 <h3>Link to videos</h3>
 <p style="padding-left: 10px; padding-right: 10px;">All videos above can be accessed <a href="https://drive.google.com/open?id=0B_yFyQ8wPSh8YURfc2VkVDNJVEU">here</a>.</p>
 
